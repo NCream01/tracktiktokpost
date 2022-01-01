@@ -17,8 +17,9 @@ jobs:
         python main.py --username=fuji_an --file=out.json
     - name: Deploy Files
       run: |
-        git config user.name "github-bot"
+        echo "{}" > out.json
+        git config user.name "github-actions"
         git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        git add .
+        git add out.json
         git commit -m "* Update out.json"
         git push
